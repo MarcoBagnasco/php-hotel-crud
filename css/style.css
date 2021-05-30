@@ -14,9 +14,6 @@ a{
     text-decoration: none;
     color: #000;
 }
-ul{
-    list-style: none;
-}
 
 /********** UTILITIES **********/
 .container{
@@ -60,7 +57,6 @@ ul{
     transition: transform .3s;
 }
 /* Card Nail */
-
 .nail-archive{
     top: 7px;
     left: 50%;
@@ -95,6 +91,7 @@ ul{
 .room-details-main i{
     margin-right: 10px;
 }
+
 /* Details Card */
 .details-card{
     position: relative;
@@ -109,24 +106,30 @@ ul{
     margin-bottom: 15px;
     font-size: 2.5rem;
 }
+.details-card h3{
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
 /* Details Card Nails */
-.nail-1{
+.details-card .nail-1{
     top: 15px;
     left: 15px;
 }
-.nail-2{
+.details-card .nail-2{
     top: 15px;
     right: 15px;
 }
-.nail-3{
+.details-card .nail-3{
     bottom: 15px;
     left: 15px;
 }
-.nail-4{
+.details-card .nail-4{
     bottom: 15px;
     right: 15px;
 }
-/* Scroll Arrow */
+/* Scroll Arrows */
 .details-card .scroll-arrows{
     margin: 0;
     position: absolute;

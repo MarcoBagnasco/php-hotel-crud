@@ -24,5 +24,19 @@ if($id){
     echo 'No ID detected';
 }
 
+// Get Tot Rooms Number
+// SQL Query
+$sql = "SELECT MAX(`id`) AS `max` FROM `stanze`";
+$result = $conn -> query($sql);
+
+if($result && $result -> num_rows > 0){
+    // Tot Array
+    $tot_rooms_array = $result -> fetch_assoc();
+    // Tot
+    $tot_rooms = (int)$tot_rooms_array['max'];
+} else {
+    echo 'Query error';
+}
+
 // Close Connection
 $conn -> close();
