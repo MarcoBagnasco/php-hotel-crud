@@ -1,0 +1,143 @@
+/********** GENERAL **********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #2d2d2d;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+
+/********** UTILITIES **********/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nails{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: linear-gradient(151deg, rgba(255,252,231,0.9) 25%, rgba(181,180,108,1) 69%);
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 50%;
+}
+
+/********** HEADER **********/
+.site-header{
+    font-family: 'Allura', cursive;
+    color: #b5b46c;
+}
+.site-header h1{
+    font-weight: normal;
+    font-size: 4rem;
+}
+.site-header img{
+    width: 300px;
+}
+
+/********** ROOMS ARCHIVE **********/
+/* Card */
+.card{
+    position: relative;
+    padding: 20px;
+    margin: 15px;
+    background: linear-gradient(167deg, rgba(181,180,108,1) 30%, rgba(255,252,231,0.9) 50%, rgba(181,180,108,1) 70%);
+    border-radius: 50% ;
+    transform-origin: 50% 12px;
+    transition: transform .3s;
+}
+/* Card Nail */
+
+.nail-archive{
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Card Interation */
+.container > a{
+    width: calc(20% - 30px);
+}
+.card:hover{
+    animation: flicker .5s linear infinite;
+}
+@keyframes flicker{
+    from, to{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+}
+
+/********** ROOM DETAILS **********/
+.room-details-main{
+    color: #fff;
+}
+.room-details-main a{
+    color: #fff;
+}
+.room-details-main i{
+    margin-right: 10px;
+}
+/* Details Card */
+.details-card{
+    position: relative;
+    width: 400px;
+    margin: 20px;
+    padding: 30px;
+    color: #000;
+    background: linear-gradient(167deg, rgba(181,180,108,1) 30%, rgba(255,252,231,0.9) 50%, rgba(181,180,108,1) 70%);
+    border-radius: 20px ;
+}
+.details-card h2{
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+/* Details Card Nails */
+.nail-1{
+    top: 15px;
+    left: 15px;
+}
+.nail-2{
+    top: 15px;
+    right: 15px;
+}
+.nail-3{
+    bottom: 15px;
+    left: 15px;
+}
+.nail-4{
+    bottom: 15px;
+    right: 15px;
+}
+/* Scroll Arrow */
+.details-card .scroll-arrows{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+}
+.details-card .scroll-arrows.left{
+    left: -40px;
+}
+.details-card .scroll-arrows.right{
+    right: -40px;
+}

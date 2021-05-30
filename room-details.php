@@ -13,18 +13,33 @@ require_once __DIR__ . '/partials/templates/head.php';
 
 <body>
     <?php
-    if(!empty($room)) { ?>
-        <h1>Room #<?php echo $room['room_number'];?></h1>
+    // Include Header
+    $title = 'Room Details';  
+    require_once __DIR__ . '/partials/templates/header.php';
+    ?>
 
-        <ul>
-            <li>Floor: <?php echo $room['floor'];?></li>
-            <li>Beds Number: <?php echo $room['beds'];?></li>
-        </ul>
-    <?php } else { ?>
-        <p>No room found</p>
-    <?php } ?>
-    
-    <a href="./">Back to Rooms Archive</a>
+    <main class="room-details-main">
+        <?php
+        if(!empty($room)) { ?>
+            <div class="container">
+                <!-- Details Card -->
+                <div class="details-card">
+                    <h2>Room #<?php echo $room['room_number'];?></h2>
+                    <div><i class="fas fa-sort-amount-up-alt"></i> Floor: <?php echo $room['floor'];?></div>
+                    <div><i class="fas fa-bed"></i> Beds Number: <?php echo $room['beds'];?></div>
+                    <!-- Details Card Nails -->
+                    <div class="nails nail-1"></div>
+                    <div class="nails nail-2"></div>
+                    <div class="nails nail-3"></div>
+                    <div class="nails nail-4"></div>
+                </div>
+            </div>
+        <?php } else { ?>
+            <p>No room found</p>
+        <?php } ?>
+        
+        <a href="./"><i class="fas fa-arrow-left"></i>Back to Rooms Archive</a>
+    </main>
 
 
 </body>
